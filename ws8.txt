@@ -1,0 +1,824 @@
+Script started on 2021-11-03 02:11:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ head -n 1 amazon_reviews_us_Books_v1_02.tsv
+marketplace	customer_id	review_id	product_id	product_parent	product_title	product_category	star_rating	helpful_votes	total_votes	vine	verified_purchase	review_headline	review_body	review_date
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ head -n 1 amazon_reviews_us_Books_v1_02.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pgit push -u origin masterremote add origin https://github.com/adot18/as3.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[30Ppush -u origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 1 amazon_reviews_us_Books_v1_02.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kawk -F "\t" [K '($12 == "Y") {print}' amazon_reviews_us_Books_v1_02.tsv > verified.csv
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ awk -F "\t" '($12 == "Y") {print}' amazon_reviews_us_Books_v1_02.tsv > verified.csvuverified.csv[C[C[C[C[C[C[C[C[Cnverified.csv[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C") {print}' amazon_reviews_us_Books_v1_02.[1P[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CN") {print}' amazon_reviews_us_Books_v1_02[1@.[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ awk -F "\t" '($12 == "N") {print}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CY
+[C[C[C[C[C[C[C[C[2Pverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C }' amazon_reviews_us_Books_v1_0[1@2[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C$}' amazon_reviews_us_Books_v1_[1@0[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1}' amazon_reviews_us_Books_v1[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4}' amazon_reviews_us_Books_v[1@1[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ awk -F "\t" '($12 == "Y") {print $14}' amazon_reviews_us_Books_v1_02.tsv > verified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CN") {print}' amazon_reviews_us_Books_v1_02[2P.tsv > unverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C }' amazon_reviews_us_Books_v1_0[1@2[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C$}' amazon_reviews_us_Books_v1_[1@0[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1}' amazon_reviews_us_Books_v1[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4}' amazon_reviews_us_Books_v[1@1[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ tr " " "\n" < verified.csv | sort }[K| uniq -c | sort -nr | print  -n[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[Khead - n 1-[K0
+^C
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ tr " " "\n" < verified.csv | sort | uniq -c | sort -nr | head -n 10[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+^C
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ tr " " "\n" < verified.csv | sort | uniq -c | sort -nr | head[K[K[K[Kless
+[?1049h[22;0;0t[?1h=1915334 the
+1174155 
+1144030 of
+1123576 and
+ 996304 to
+ 927428 a
+ 667158 is
+ 587726 in
+ 548485 I
+ 443736 that
+ 385755 this
+ 366357 book
+ 342746 for
+ 294575 it
+ 272250 with
+ 250789 as
+ 239844 are
+ 227530 on
+ 220453 you
+ 213744 was
+ 198581 have
+ 193894 The
+ 193036 not
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K 178592 be
+:[K[K [KESCESC[KOO[KBB[K 176129 but
+:[K[K [KESCESC[KOO[KBB[K 158668 his
+:[K[K [KESCESC[KOO[KBB[K 142820 an
+:[K[K [KESCESC[KOO[KBB[K 137551 by
+:[K[K [KESCESC[KOO[KBB[K 132778 from
+:[K[K [KESCESC[KOO[KBB[K 127068 or
+:[K[K [KESCESC[KOO[KBB[K 125851 about
+:[K[K [KESCESC[KOO[KBB[K 121567 This
+:[K[K [KESCESC[KOO[KBB[K 118632 one
+:[K[K [KESCESC[KOO[KBB[K 117520 has
+:[K[K [KESCESC[KOO[KBB[K 115566 at
+:[K[K [KESCESC[KOO[KBB[K 115277 <br
+:[K[K [KESCESC[KOO[KBB[K 112587 he
+:[K[K [KESCESC[KOO[KBB[K 111040 who
+:[K[K [KESCESC[KOO[KBB[K 108187 more
+:[K[K [KESCESC[KOO[KBB[K 107399 all
+:[K[K [KESCESC[KOO[KBB[K 104687 my
+:[K[K [KESCESC[KOO[KBB[K 103684 read
+:[K[K [KESCESC[KOO[KBB[K  96116 will
+:[K[K [KESCESC[KOO[KBB[K  94688 her
+:[K[K [KESCESC[KOO[KBB[K  89629 so
+:[K[K [KESCESC[KOO[KBB[K  88440 very
+:[K[K [KESCESC[KOO[KBB[K  87554 what
+:[K[K [KESCESC[KOO[KBB[K  86989 It
+:[K[K [KESCESC[KOO[KBB[K  84656 would
+:[K[K [KESCESC[KOO[KBB[K  83150 some
+:[K[K [KESCESC[KOO[KBB[K  80061 they
+:[K[K [KESCESC[KOO[KBB[K  79370 can
+:[K[K [KESCESC[KOO[KBB[K  78179 like
+:[K[K [KESCESC[KOO[KBB[K  78169 their
+:[K[K [KESCESC[KOO[KBB[K  75627 how
+:[K[K [KESCESC[KOO[KBB[K  75032 /><br
+:[K[K [KESCESC[KOO[KBB[K  73007 which
+:[K[K [KESCESC[KOO[KBB[K  72059 just
+:[K[K [KESCESC[KOO[KBB[K  70566 out
+:[K[K [KESCESC[KOO[KBB[K  68282 if
+:[K[K [KESCESC[KOO[KBB[K  66931 other
+:[K[K [KESCESC[KOO[KBB[K  66527 than
+:[K[K [KESCESC[KOO[KBB[K  64705 only
+:[K[K [KESCESC[KOO[KBB[K  64513 had
+:[K[K [KESCESC[KOO[KBB[K  63677 many
+:[K[K [KESCESC[KOO[KBB[K  63480 into
+:[K[K [KESCESC[KOO[KBB[K  62467 good
+:[K[K [KESCESC[KOO[KBB[K  61883 your
+:[K[K [KESCESC[KOO[KBB[K  60104 book.
+:[K[K [KESCESC[KOO[KBB[K  59500 />
+:[K[K [KESCESC[KOO[KBB[K  58400 been
+:[K[K [KESCESC[KOO[KBB[K  58238 much
+:[K[K [KESCESC[KOO[KBB[K  57043 also
+:[K[K [KESCESC[KOO[KBB[K  56549 up
+:[K[K [KESCESC[KOO[KBB[K  56237 when
+:[K[K [KESCESC[KOO[KBB[K  55997 most
+:[K[K [KESCESC[KOO[KBB[K  55902 me
+:[K[K [KESCESC[KOO[KBB[K  55732 were
+:[K[K [KESCESC[KOO[KBB[K  55377 -
+:[K[K [KESCESC[KOO[KBB[K  54390 there
+:[K[K [KESCESC[KOO[KBB[K  53941 we
+:[K[K [KESCESC[KOO[KBB[K  53514 she
+:[K[K [KESCESC[KOO[KBB[K  53031 great
+:[K[K [KESCESC[KOO[KBB[K  52587 books
+:[K[K [KESCESC[KOO[KBB[K  52452 first
+:[K[K [KESCESC[KOO[KBB[K  50517 do
+:[K[K [KESCESC[KOO[KBB[K  50470 get
+:[K[K [KESCESC[KOO[KBB[K  50128 no
+:[K[K [KESCESC[KOO[KBB[K  49752 story
+:[K[K [KESCESC[KOO[KBB[K  47180 really
+:[K[K [KESCESC[KOO[KAA[K[HM  62467 good
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  63480 into
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  63677 many
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  64513 had
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  64705 only
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  66527 than
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  66931 other
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  68282 if
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  70566 out
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  72059 just
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  73007 which
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  75032 /><br
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  75627 how
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  78169 their
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  78179 like
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  79370 can
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  80061 they
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  83150 some
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  84656 would
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  86989 It
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  87554 what
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  88440 very
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  89629 so
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  94688 her
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM  96116 will
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 103684 read
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 104687 my
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 107399 all
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 108187 more
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 111040 who
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 112587 he
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 115277 <br
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 115566 at
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 117520 has
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 118632 one
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 121567 This
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 125851 about
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 127068 or
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 132778 from
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 137551 by
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 142820 an
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 158668 his
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 176129 but
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 178592 be
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 193036 not
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 193894 The
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 198581 have
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 213744 was
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 220453 you
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 227530 on
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 239844 are
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 250789 as
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 272250 with
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 294575 it
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 342746 for
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 366357 book
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 385755 this
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 443736 that
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 548485 I
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 587726 in
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 667158 is
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 927428 a
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM 996304 to
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM1123576 and
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM1144030 of
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM1174155 
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM1915334 the
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>[?1049l[23;0;0t]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ tr " " "\n" < verified.csv | sort | uniq -c | sort -nr | less[1@unverified.csv | sort | uniq -c | sort -nr | less [A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[22;0;0t[?1h=[K:[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K [KESCESC[KOO[KAA[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K...skipping...
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ tr " " "\n" < unverified.csv | sort | uniq -c | sort -nr | less [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead -n 10[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[CY
+[C[C[C[C[C[C[C[C[C[C[C[C[2Pverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CN
+[C[C[C[C[C[C[C[C[C[C[C[Cunverified.csv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_[1@v[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [Coawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[Crawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Book[1@s[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Boo[1@k[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[Ciawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Bo[1@o[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_B[C[1@o[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[Ciawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_[1@B[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[Cnawk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_u[1@s[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C1awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_[1@u[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C0awk -F "\t" '($12 == "N") {print $14}' amazon_reviews[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C0awk -F "\t" '($12 == "N") {print $14}' amazon_review[1@s[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C;awk -F "\t" '($12 == "N") {print $14}' amazon_revie[1@w[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print $14}' amazon_revi[1@e[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cdawk -F "\t" '($12 == "N") {print $14}' amazon_rev[1@i[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[Coawk -F "\t" '($12 == "N") {print $14}' amazon_re[1@v[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print $14}' amazon_r[1@e[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; done
+^C
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ for i in 100; do awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; do awk -F "\t" '($12 == "N") {print $14}' amazon_re[1P[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C; do awk -F "\t" '($12 == "N") {print $14}' amazon_rev[1P[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C; do awk -F "\t" '($12 == "N") {print $14}' amazon_revi[1P[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C{; do awk -F "\t" '($12 == "N") {print $14}' amazon_rev[1@i[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C1; do awk -F "\t" '($12 == "N") {print $14}' amazon_re[1@v[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C.; do awk -F "\t" '($12 == "N") {print $14}' amazon_r[1@e[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C.; do awk -F "\t" '($12 == "N") {print $14}' amazon_[1@r[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C1; do awk -F "\t" '($12 == "N") {print $14}' amazon[1@_[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C0; do awk -F "\t" '($12 == "N") {print $14}' amazo[1@n[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0; do awk -F "\t" '($12 == "N") {print $14}' amaz[1@o[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C}; do awk -F "\t" '($12 == "N") {print $14}' ama[1@z[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+^C
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ for i in {1..100}; do awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceawk -F "\t" '($12 == "N") {print $14}' am[1@a[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccawk -F "\t" '($12 == "N") {print $14}' a[1@m[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chawk -F "\t" '($12 == "N") {print $14}' [1@a[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Coawk -F "\t" '($12 == "N") {print $14}'[1@ [A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print $14}[1@'[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C$awk -F "\t" '($12 == "N") {print $14[1@}[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ciawk -F "\t" '($12 == "N") {print $1[1@4[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print $[1@1[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C|awk -F "\t" '($12 == "N") {print [1@$[A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C awk -F "\t" '($12 == "N") {print[1@ [A]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+^[[A^C
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ for i in {1..100}; do echo $i | awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv; done[Aawk -F "\t" '($12 == "N") {print $14}' ama[10P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C100; do awk -F "\t" '($12 == "N") {print $14}' amazon_r[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctr " " "\n" < unverified.csv | sort | uniq -c | sort -nr | less [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cheadless[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cunverified.csv | sort | uniq -c | sort -nr | less [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor i in 100; do awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv; done[A{1..100}; do awk -F "\t" '($12 == "N") {print $14}' ama[5@zon_r[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Aecho $i | awk -F "\t" '($12 == "N") {print[10@ $14}' ama[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chead unverified.csv 
+this boook was a great one that you could learn from. it not only teaches the imponrtance of family and their values but it also deals with basic issues that teens and some kids even deal with.  this book is about 4 best friends who are for the first time in their lives spending their summer apart. one day they are all in one of the girls rooms and finds a pair of pants that were tucked away in her closet.  once all four  of them try them on they realize that there is really something special about these pants.  seeming as how all 4 girls are differnt shapes and sizes and somehow the pants fit all of them,  they realize that these pants were the start of something special.  immediatley following they decided to make up certian rules abut the pants such as you must write the best thing u did while wearing the pants over your summer on the right leg and also some silly things such as to \\"never pick yuor nose while wearing the pants.\\"  this book follows the girls throuh their summers in differnt places of the world and through all of the different obstacles that life takes them through. it can really teach you alot not only about what is going on around you but most imporntantly about yuorself.  i would give this book 4 stars and would reccommend it to anyone who seems the slihgtest bit interested.
+If you are looking for something to stimulate your brain, this isn't it.  However, if you are just looking for a good laugh, you'll enjoy The Bad Girl's Guide.  It's funny and light, and definitely a good way to pass a little bit of time.
+never read it-a young relative idicated he liked it and somehow my name popped upon this--no more to say
+Though she is honored to be Chicago Woman of the Year, Victoria Colby-Camp is more euphoric over the mental improvement that her son Jim has shown recently especially since he and Tasha North fell in love.  Jim was snatched almost twenty years ago when he was seven and turned into the killing Seth whose goal was to murder Victoria for abandoning him.  However, her elation would turn to despair if she knew Seth resurfaced and started to rape a pregnant Tasha.<br /><br />Former military strategist Daniel Marks is in town complements of the Colby Agency that wants to hire him.  Also in Chicago is Emily Hastings whose father a veteran homicide detective was murdered.  She finds letters linking her dad to Victoria, the woman's long ago murdered first husband James, and her dad's first partner Marelyn Rutland that confuses her.  Soon she will meet Daniel and they will be embroiled in the COLBY CONSPIRACY that goes back almost two decades ago.<br /><br />Though the subplots can become confusing at first, once the audience comprehends how this complex superb suspense thriller starts to come together, they will want more Colby Agency tales; (see FILES FROM THE COLBY AGENCY: THE BODYGUARD'S BABY PROTECTIVE CUSTODY).  The ensemble cast is solid as fans will feel with Victoria who has overcome so much tragedy, hope Jim \\"defeats\\" Seth with Tasha at his side, and root for Daniel and Emily to make it while wondering what really happened two decades ago.  A final twist marks a strong Webb of deceit tale that showcases a fine author on her A-game.<br /><br />Harriet Klausner
+Review based on a cursory examination by University of Phoenix students in Philosophy 251.  <br />We have found the book to be well organized, and detailed. The structure placed the information in an easy to read and presentable manner. <br />The use of strong and sound proofs by experiment and examples supported the overall logic of reasoning in a clear and concise manner. <br />We have found the book to be well thought out and laid out so the reader can learn and follow what is being explained. <br />
+My only complaint is that this book was a bit repetative, and Holden's vocabulary only consists of 4 words: sonuvabitch, goddamn, lousy and phony. It was still quite humorous and the actual story was interesting.<br /><br />It was easy to read and to relate to, so you should pick it up if you're looking for a fun read. Some people complain about the lack of a plot, but to understand this book you need to read deeper into it. It's actually a lot more than some annoying kid's list of complaints about life.<br /><br />The story is about Holden Caulfield's coming of age and realizing that growing up is not a process that can be stopped. He had a lousy childhood, as he puts it, and wants to save other children from going though the things he experienced in his life. He is telling the story from a mental institution, which he was placed in after returning home from the fourth Prep school he had been kicked out of. He flashes back to the events leading up to his arrival at his home and tells the story of those 3 days.
+This book is chilling and depressing indeed, though very well written and sprinkled with frequent humor.  I was sort of surprised however by the comment in Publisher's Weekly which said that \\"PW suspects that many of those buyers will be disappointed. Ehrenreich can't deliver the promised story because she never managed to get employed in the 'midlevel corporate world' she wanted to analyze.\\"  I never viewed that as being the \\"promised story\\" in the first place.  To me, the primary point of the book was to describe what it was like to actually try to ENTER that world in the first place rather than describing what life was like when she got there--and that she did.  In fact, I actually thought that she \\"lucked out\\" in a sense by having the bizarre, surreal experiences she did--not only did it make for more entertaining and more thought-provoking reading, but in my mind, if she HAD obtained a job right away, it would have taken away the whole raison d'etre of the book.  It would have been a completely different book in which she merely described her (presumably) boring mid-level corporate job, which probably would have been the same from day to day.  Thus, at least for purposes of writing the book, I think she was \\"lucky\\" that things worked out the way they did.  As for the reader who criticized her for not taking the \\"jobs\\" offered by AFLAC and Mary Kay, I thought those comments were bizarre.  I agree with Ms. Ehrenreich's point in that \\"jobs\\" such as these in which the employer offers no salary, no benefits, no office, no help and essentially takes no risk whatsoever can hardly be considered jobs in the traditional sense she was seeking.  In any event, it's really a pretty scary and depressing book, but one which I recommend.
+When looking for &lt;a href=\\"[...]\\">lock picking books&lt;/a>, this one is very informative. It will give one great ideas on opening padlocks, but the language is very basic, no frills here. This is not a romance novel, it's how to open locks without keys, and that's it. You will learn what you need to here. But you should always seek out more knowledge.
+If you enjoy a well told yarn of intrigue told so skillfully you are not able to predict the ending, a really good who-done-it, this is for you.
+I thoroughly enjoyed reading Faith is a verb by Chris Goodrich. The book covers facts regarding the history of the organization Habitat for Humanity and the author's experiences volunteering. Goodrich writes about the places, the people, and the volunteers he has encountered during his five-year experience with Habitat for Humanity. The author speaks straight from the heart, some of which brought tears to my eyes, some of sadness, some of laughter. Even through all the heart-wrenching sights, Goodrich and his crew persevere, regardless of the obstacles they face. Goodrich's experiences include traveling around the world, from America to London from London to Paraguay even getting lost in the Sierra, Faith is a Verb, is a fantastic read. In addition, the book opens a person's eyes and heart to the devastation and suffering that many see everyday of their lives. The book puts into perspective just how lucky we are even though we may not think so; it made me not only look at my ethics and values but also encouraged me to pick up that hammer.
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ head unverified.csv [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor i in {1..100}; do echo $i | awk -F "\t" '($12 == "N") {print $14}' amazon_reviews_us_Books_v1_02.tsv > unverified.csv; done[Aawk -F "\t" '($12 == "N") {print $14}' ama[10P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C100; do awk -F "\t" '($12 == "N") {print $14}' amazon_r[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctr " " "\n" < unverified.csv | sort | uniq -c | sort -nr | less [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cunverified.csv | sort | uniq -c | sort -nr | less [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cunverified.csv | sort | uniq -c | sort -nr | less [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ks
+[?1049h[22;0;0t[?1h=15742163 the
+9509510 and
+9226901 of
+8401667 to
+7836109 a
+7349477 
+5560744 is
+4841751 in
+4456419 I
+3764813 that
+3103968 this
+2979059 book
+2723967 for
+2486285 it
+2289918 with
+2054191 as
+1928608 was
+1827635 are
+1799681 you
+1768815 on
+1633640 The
+1560078 have
+1519720 not
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K1472611 his
+:[K[K [KESCESC[KOO[KBB[K1451352 be
+:[K[K [KESCESC[KOO[KBB[K1429896 but
+:[K[K [KESCESC[KOO[KBB[K1348837 <br
+:[K[K [KESCESC[KOO[KBB[K1207884 an
+:[K[K [KESCESC[KOO[KBB[K1162028 by
+:[K[K [KESCESC[KOO[KBB[K1116774 from
+:[K[K [KESCESC[KOO[KBB[K1079702 about
+:[K[K [KESCESC[KOO[KBB[K1074438 he
+:[K[K [KESCESC[KOO[KBB[K1066968 her
+:[K[K [KESCESC[KOO[KBB[K1029320 has
+:[K[K [KESCESC[KOO[KBB[K1004575 who
+:[K[K [KESCESC[KOO[KBB[K 990505 one
+:[K[K [KESCESC[KOO[KBB[K 985346 at
+:[K[K [KESCESC[KOO[KBB[K 982047 or
+:[K[K [KESCESC[KOO[KBB[K 961084 This
+:[K[K [KESCESC[KOO[KBB[K 955622 read
+:[K[K [KESCESC[KOO[KBB[K 934707 all
+:[K[K [KESCESC[KOO[KBB[K 831499 my
+:[K[K [KESCESC[KOO[KBB[K 820098 more
+:[K[K [KESCESC[KOO[KBB[K 801149 will
+:[K[K [KESCESC[KOO[KBB[K 759953 so
+:[K[K [KESCESC[KOO[KBB[K 742046 what
+:[K[K [KESCESC[KOO[KBB[K 726357 they
+:[K[K [KESCESC[KOO[KBB[K 711635 It
+:[K[K [KESCESC[KOO[KBB[K 705892 like
+:[K[K [KESCESC[KOO[KBB[K 702629 very
+:[K[K [KESCESC[KOO[KBB[K 702414 their
+:[K[K [KESCESC[KOO[KBB[K 685769 would
+:[K[K [KESCESC[KOO[KBB[K 670935 can
+:[K[K [KESCESC[KOO[KBB[K 627951 some
+:[K[K [KESCESC[KOO[KBB[K 625951 how
+:[K[K [KESCESC[KOO[KBB[K 623876 out
+:[K[K [KESCESC[KOO[KBB[K 621450 />
+:[K[K [KESCESC[KOO[KBB[K 617526 she
+:[K[K [KESCESC[KOO[KBB[K 613132 just
+:[K[K [KESCESC[KOO[KBB[K 568280 which
+:[K[K [KESCESC[KOO[KBB[K 559354 into
+:[K[K[?1l>[?1049l[23;0;0t]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ mv unverified.csv verified.csv [K[K[K[K[K[K[K[K[K[K[K[K[Kws8
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ mv verified.csv ws8
+]0;ong@f6linux14: ~[01;32mong@f6linux14[00m:[01;34m~[00m$ cd ws8
+]0;ong@f6linux14: ~/ws8[01;32mong@f6linux14[00m:[01;34m~/ws8[00m$ exit
+
+Script done on 2021-11-03 02:53:22+00:00 [COMMAND_EXIT_CODE="0"]

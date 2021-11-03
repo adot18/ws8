@@ -1,0 +1,1000 @@
+  950  cd ../datamash-1.3/
+  951  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 1:2 < ../CUSTOMERS/$file ; done
+  952  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file ; done
+  953  cd ../../assignment2/
+  954  ls
+  955  cd PRODUCTS/
+  956  ls
+  957  head 0671524313.txt.new 
+  958  head 043935806X.txt.new 
+  959  ls
+  960  cd ../../assignment2/CUSTOMERS/
+  961  ls
+  962  cd helpful
+  963  ls
+  964  head 52173832.txt.new.helpful 
+  965  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' ; done
+  966  awk '{total += $1} END {print total/NR}' 52173832.txt.new.helpful 
+  967  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' ; done
+  968  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' $file ; done
+  969  awk '{total += $1} END {print total/NR}' 20595117.txt.new.helpful 
+  970  cd assignment2
+  971  cd ~
+  972  cd assignment2
+  973  cd PRODUCTS/
+  974  ls
+  975  for file in *.new ; do cut -d "	" -f 2 $file > $file.helpful ; done
+  976  ls
+  977  mkdir helpful
+  978  for file in *.new.helpful ; do mv $file helpful ; done
+  979  ls
+  980  cd helpful
+  981  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' $file ; done
+  982  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' $file >> mean.txt ; done
+  983  ls
+  984  sort mean.txt
+  985  sort -n mean.txt 
+  986  cd ../../../assignment2/CUSTOMERS/
+  987  ls
+  988  cd helpful
+  989  ls
+  990  for file in *.txt.new.helpful ; do awk '{total += $1} END {print total/NR}' $file >> mean.txt ; done
+  991  ls
+  992  sort -n mean.txt 
+  993  cd ../../../assignment2/
+  994  cmds.log > history
+  995  history > cmds.log
+  996  head cmds.log
+  997  wc cmds.log 
+  998  ls
+  999  less a2.txt
+ 1000  d da
+ 1001  cd data
+ 1002  cd datamash-1.3/
+ 1003  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file ; done
+ 1004  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file >> helpfuless_review.txt; done
+ 1005  ls
+ 1006  sort -n helpfuless_review.txt 
+ 1007  mv helpfuless_review.txt assignment2
+ 1008  ls
+ 1009  mv assignment2 helpfulness_review.txt
+ 1010  ls
+ 1011  mv helpfulness_review.txt ../../assignment2/
+ 1012  ls
+ 1013  cd ../../assignment2/
+ 1014  ls
+ 1015  cd CUSTOMERS/
+ 1016  l
+ 1017  w
+ 1018  ls
+ 1019  w
+ 1020  cd helpful/
+ 1021  ls
+ 1022  w
+ 1023  l
+ 1024  cd 
+ 1025  ls
+ 1026  cd ..
+ 1027  ls
+ 1028  cd CUSTOMERS/
+ 1029  ls
+ 1030  head 52615377.txt.new 
+ 1031  Sed ’s/\(\d\)\t\(.*\)$/\2\t\1/’ 52615377.txt.new 
+ 1032  sed ’s/\(\d\)\t\(.*\)$/\2\t\1/’ 52615377.txt.new 
+ 1033  sed ’s/\(.\)\t\(.*\)$/\2\t\1/’ 52615377.txt.new 
+ 1034  cd ../../assignment2/
+ 1035  cd datamash-1.3/
+ 1036  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 2:1 < ../CUSTOMERS/$file ; done
+ 1037  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 1:2 < ../CUSTOMERS/$file ; done
+ 1038  cd ../../assignment2/
+ 1039  ls
+ 1040  cd CUSTOMERS/
+ 1041  ls
+ 1042  cd helpful/
+ 1043  ls
+ 1044  head mean.txt 
+ 1045  tmux 
+ 1046  tmux ls
+ 1047  sort productids.txt | uniq -c | sort -nk1 --reverse | wc
+ 1048  sort customerids.txt | uniq -c | sort -nk1 --reverse | wc
+ 1049  cd ~
+ 1050  cd assignment2/
+ 1051  ls
+ 1052  sort product_title.txt | uniq -c | sort -nk1 --reverse | wc
+ 1053  vi 100CustomerIDs.txt 
+ 1054  vi 100ProductIDs.txt 
+ 1055  cd CUSTOMERS/
+ 1056  l
+ 1057  cd ..
+ 1058  cd PRODUCTS/
+ 1059  l
+ 1060  w
+ 1061  cd ../CUSTOMERS/
+ 1062  w
+ 1063  echo before I did alias l="ls latr" and alias w="ls -la|wc"
+ 1064  echo I went into vi ~/.bash_aliases and then added them into bashrc manually
+ 1065  cd ..
+ 1066  cd datamash-1.3/
+ 1067  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 1:2 < ../CUSTOMERS/$file ; done
+ 1068  cd ../CUSTOMERS/
+ 1069  cd helpful/
+ 1070  ls
+ 1071  head mean.txt 
+ 1072  echo I had a for loop initially that calculated the mean of each file and put it into mean.txt for CUSTOMERS and PRODUCTS
+ 1073  sort -n mean.txt 
+ 1074  cd ../../PRODUCTS/helpful/
+ 1075  ls
+ 1076  head mean.txt 
+ 1077  sort -n mean.txt 
+ 1078  echo did the same thing for PRODUCTS except I used the star rating instead
+ 1079  history > cmds.log
+ 1080  ls
+ 1081  mv cmds.log ../../../assignment2/
+ 1082  ls
+ 1083  cd ..
+ 1084  ls
+ 1085  rm history
+ 1086  ls
+ 1087  ls
+ 1088  head '*.txt.new' 
+ 1089  cd assignment2/
+ 1090  ls
+ 1091  rm a2.txt 
+ 1092  cd ~
+ 1093  ls
+ 1094  cd WS4
+ 1095  ls
+ 1096  cd CUSTOMERS/
+ 1097  ls
+ 1098  cd ~
+ 1099  ls
+ 1100  cd WS4
+ 1101  ls
+ 1102  cd PRODUCTS/
+ 1103  ;s
+ 1104  ls
+ 1105  cd ~
+ 1106  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1107  cd ws3
+ 1108  ls
+ 1109  script a2.txt
+ 1110  ls
+ 1111  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a2.txt > a2.txt.clean
+ 1112  tr -cd '\11\12\15\40-\176' < a2.txt.clean > a2.txt.clean2
+ 1113  sed -i "s/^M//g" a2.txt.clean2
+ 1114  ls
+ 1115  rm a2.txt
+ 1116  rm a2.txt.clean
+ 1117  ls
+ 1118  vi a2.txt.clean2 
+ 1119  ls
+ 1120  mv a2.txt.clean2 ../assignment2/
+ 1121  ls
+ 1122  cd ../assignment2/
+ 1123  ls
+ 1124  git init
+ 1125  git add a2.txt.clean2 
+ 1126  git commit -m "a2"
+ 1127  git remote add origin https://github.com/adot18/assignment2.git
+ 1128  git push -u origin main
+ 1129  git push -u origin master
+ 1130  :bd
+ 1131  kill session
+ 1132  kill-session
+ 1133  script 
+ 1134  tmux ls
+ 1135  tmux attach-session
+ 1136  tmux
+ 1137  tmux attach-session
+ 1138  cd ws5
+ 1139  ls
+ 1140  cd ws5
+ 1141  cd CUSTOMERS/
+ 1142  ls
+ 1143  cd ws3
+ 1144  ls
+ 1145  less customerids.txt 
+ 1146  cd ..
+ 1147  ls
+ 1148  cd ws3
+ 1149  ls
+ 1150  less helpful.txt 
+ 1151  sort customerids.txt | uniq -c | sort -nk1 --reverse | head
+ 1152  sort customerids.txt | uniq -c | sort -nk1 --reverse > customerids.txt.sorted.uc.reversed
+ 1153  ls
+ 1154  cp customerids.txt.sorted.uc.reversed customerids.txt.sorted.uc.reversed.top1000
+ 1155  vi customerids.txt.sorted.uc.reversed.top1000
+ 1156  wc customerids.txt.sorted.uc.reversed.top1000 
+ 1157  mkdir ~/ws5/CUSTOMERS
+ 1158  for i in `cat customerids.txt.sorted.uc.reversed.top1000` ; do grep $i ../amazon_reviews_us_Books_v1_02.tsv ; done >> ~/ws5/CUSTOMERS/$i.txt
+ 1159  for i in `cat customerids.txt.sorted.uc.reversed.top1000` ; do grep $i ../amazon_reviews_us_Books_v1_02.tsv >> ~/ws5/CUSTOMERS/$i.txt; echo $i; done
+ 1160  cd ~/WS5
+ 1161  cd ~/ws5
+ 1162  ls
+ 1163  cd CUSTOMERS/
+ 1164  l
+ 1165  cd ~/ws5
+ 1166  ls
+ 1167  history > cmds.log
+ 1168  perl -pe 's/\x1b\[[0-9;]*[mG]//g' ws5.txt > ws5.txt.clean
+ 1169  tr -cd '\11\12\15\40-\176' < ws5.txt.clean > ws5.txt.clean2
+ 1170  sed -i "s/^M//g" ws5.txt.clean2
+ 1171  ls
+ 1172  git init
+ 1173  git add cmds.log 
+ 1174  git add ws5.txt.clean2 
+ 1175  git commit -m "ws5"
+ 1176  git remote add origin https://github.com/adot18/ws5.git
+ 1177  git push -u origin master
+ 1178  mv ws5.txt ws5
+ 1179  ls
+ 1180  cd ws5
+ 1181  ls
+ 1182  tmux attach-session
+ 1183  ls
+ 1184  echo `pwd`
+ 1185  man ps
+ 1186  echo $HOME
+ 1187  echo $SHELL
+ 1188  PRINTENV
+ 1189  printenv
+ 1190  $ prompt
+ 1191  prompt
+ 1192  ls
+ 1193  cd worksheet1/
+ 1194  ls
+ 1195  time sort a1.txt >> sorted
+ 1196  ls
+ 1197  rm sorted 
+ 1198  ls
+ 1199  sort time a1.txt >> sorted
+ 1200  cd /
+ 1201  cd.
+ 1202  cd .
+ 1203  ls
+ 1204  cd ~
+ 1205  ls
+ 1206  cd .
+ 1207  ls
+ 1208  cd assignment2/
+ 1209  cd .
+ 1210  ls
+ 1211  cd .
+ 1212  find  .  -type f -name  "first.cpp"  -exec   rm   {} \
+ 1213  find  .  -type f -name  "first.cpp"  -exec   rm   {} \;
+ 1214  ls
+ 1215  cd ~
+ 1216  ;s
+ 1217  ls
+ 1218  touch first.cpp
+ 1219  ls
+ 1220  find  .  -type f -name  "first.cpp"  -exec   rm   {} \;
+ 1221  ls
+ 1222  cd assignment2/
+ 1223  touch first.cpp
+ 1224  cd ~
+ 1225  ls
+ 1226  find  .  -type f -name  "first.cpp"  -exec   rm   {} \;
+ 1227  cd assignment2/
+ 1228  ls
+ 1229  touch first.cpp
+ 1230  ls
+ 1231  cd PRODUCTS/
+ 1232  find  .  -type f -name  "first.cpp"  -exec   rm   {} \;
+ 1233  cd ./
+ 1234  cd /.
+ 1235  cd ~
+ 1236  cd assignment2/
+ 1237  ls
+ 1238  rm first.cpp
+ 1239  prompt
+ 1240  touch ?.txt
+ 1241  ls
+ 1242  find . -type f -name "?"  -print
+ 1243  ls
+ 1244  rm ?.txt
+ 1245  touch dwawdk?.txt
+ 1246  ls
+ 1247  find . -type f -name "?"  -print
+ 1248  cd ~
+ 1249  find . -type f -name "?"  -print
+ 1250  ls
+ 1251  find . -type f -name "*"  -print
+ 1252  find . -type f -name "?"  -print
+ 1253  cd assignment2/
+ 1254  ls
+ 1255  rm dwawdk\?.txt 
+ 1256  touch o.txt
+ 1257  find . -type f -name "?"  -print
+ 1258  cd ~
+ 1259  find . -type f -name "?"  -print
+ 1260  cd assignment2/
+ 1261  find . -type f -name "?"  -print
+ 1262  find . -type f -name "*"  -print
+ 1263  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+ 1264  echo $DATETIME 
+ 1265  cd assignment2/PRODUCTS/
+ 1266  cp 043935806X.txt.new 043935806X.$DATETIME.txt
+ 1267  l
+ 1268  ln -s 043935806X.20211014_181014.txt 043935806X.LATEST.txt
+ 1269  l
+ 1270  vi 043935806X.20211014_181014.txt 
+ 1271  cd ..
+ 1272  vi cronfile2
+ 1273  vi 043935806X.20211014_181014.txt
+ 1274  cd assignment2/PRODUCTS/
+ 1275  vi 043935806X.20211014_181014.txt
+ 1276  cd ~
+ 1277  vi cronfile2
+ 1278  vi cron
+ 1279  vi cronfile2 
+ 1280  crontab cronfile2
+ 1281  cron -l
+ 1282  cd assignment2/
+ 1283  cd PRODUCTS/
+ 1284  vi 043935806X.20211014_181014.txt
+ 1285  cd ~
+ 1286  cat cronfile2 
+ 1287  crontab cronfile2
+ 1288  crontab -e
+ 1289  crontab -l
+ 1290  cat assignment2/PRODUCTS/AVERAGE.txt 
+ 1291  cd assignment2/PRODUCTS/
+ 1292  mv AVERAGE.txt 043935806X.AVERAGE.txt
+ 1293  cd ~
+ 1294  cat assignment2/PRODUCTS/043935806X.AVERAGE.txt 
+ 1295  ls
+ 1296  cd ws6
+ 1297  mkdir ws6
+ 1298  ls
+ 1299  cd assignment2/
+ 1300  ls
+ 1301  cd PRODUCTS/
+ 1302  ls
+ 1303  cd $
+ 1304  cd ~
+ 1305  ls
+ 1306  script ws6.txt
+ 1307  history > cmds.log
+ 1308  less ws6.txt
+ 1309  sed 's/Ctrl-vEsc//g' ws6.txt ws6.txt.new
+ 1310  2R1;95;0c10;rgb:ffff/ffff/ffff11;rgb:1e1e/1e1e/1e1e
+ 1311  ls
+ 1312  cd ws6
+ 1313  ls
+ 1314  cd ws6
+ 1315  ls
+ 1316  cd ~
+ 1317  mv ws6.txt ws6
+ 1318  tail cmds.log
+ 1319  mv cmds.log ws6
+ 1320  ls
+ 1321  cd ws6
+ 1322  ls
+ 1323  sed 's/Ctrl-vEsc//g' ws6.txt
+ 1324  sed 's/Ctrl-vCtrl-[//g' ws6.txt 
+ 1325  perl -pe 's/\x1b\[[0-9;]*[mG]//g' ws6.txt > ws6.txt.clean
+ 1326  tr -cd '\11\12\15\40-\176' ws6.txt.clean > ws6.txt.clean2
+ 1327  tr -cd '\11\12\15\40-\176' < ws6.txt.clean > ws6.txt.clean2
+ 1328  sed -i "s/^M//g" ws6.txt.clean2
+ 1329  less ws6.txt.clean2
+ 1330  git init
+ 1331  git add ws6.txt.clean2 cmds.log 
+ 1332  git commit -m "ws6"
+ 1333  git remote add origin https://github.com/adot18/ws6.git
+ 1334  git push -u origin master
+ 1335  cd ws7
+ 1336  ls
+ 1337  cd ~/ws6
+ 1338  ls
+ 1339  mv review_body.txt ~
+ 1340  ls
+ 1341  cd ~
+ 1342  ls
+ 1343  mv review_body.txt ws7
+ 1344  ls
+ 1345  cd ws7
+ 1346  ls
+ 1347  sed -i 's/<[a-z]\+ \/>//g' review_body.txt 
+ 1348  vi review_body.txt 
+ 1349  ls
+ 1350  cd ws3
+ 1351  ls
+ 1352  cd ~
+ 1353  ls
+ 1354  cd WS4
+ 1355  ls
+ 1356  cd PRODUCTS/
+ 1357  ls
+ 1358  cd ~
+ 1359  ls
+ 1360  cd worksheet1/
+ 1361  ls
+ 1362  cd ~
+ 1363  ls
+ 1364  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1365  cd ws3
+ 1366  ls
+ 1367  less productids.txt 
+ 1368  cd ~
+ 1369  ls
+ 1370  cd WS4
+ 1371  ls
+ 1372  cd PRODUCTS/
+ 1373  ls
+ 1374  cd 081
+ 1375  less 0811828964.
+ 1376  less 0811828964.txt
+ 1377  head -n 1 0811828964.txt
+ 1378  less 0811828964.txt
+ 1379  head -n 1
+ 1380  head -n 1 0811828964.txt
+ 1381  cd ~
+ 1382  ls
+ 1383  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1384  awk -F"\t" '{print $14}' amazon_reviews_us_Books_v1_02.tsv > review_body.txt
+ 1385  grep 0811828964 review_body.txt > review
+ 1386  ls
+ 1387  less review
+ 1388  rm review
+ 1389  ls
+ 1390  grep 0811828964 amazon_reviews_us_Books_v1_02.tsv > revie
+ 1391  less review.txt
+ 1392  head review_body.txt 
+ 1393  ls
+ 1394  rm review.txt
+ 1395  rm review_body.txt 
+ 1396  ls
+ 1397  grep 0811828964 amazon_reviews_us_Books_v1_02.tsv > review.txt
+ 1398  head -n 1 review.txt 
+ 1399  awk -F"\t" '{print $14}' review.txt > review_body.txt
+ 1400  ls
+ 1401  less review_body.txt 
+ 1402  mkdir ws7
+ 1403  ls
+ 1404  mv review_body.txt ws6
+ 1405  script ws7.txt
+ 1406  ls
+ 1407  mv ws7.txt ws6
+ 1408  cd ws6
+ 1409  ls
+ 1410  mv ws7.txt ~
+ 1411  cd ~
+ 1412  ls
+ 1413  cd ws7.txt ws7
+ 1414  ls
+ 1415  mv ws7.txt ws7
+ 1416  cd ws7/
+ 1417  ls
+ 1418  git init
+ 1419  history > cmds.log
+ 1420  git add cmds.log ws7.txt 
+ 1421  git commit -m "ws7"
+ 1422  git remote add origin https://github.com/adot18/ws7.git
+ 1423  git push -u origin master
+ 1424  c=ls
+ 1425  ls
+ 1426  cd assignment2/
+ 1427  ls
+ 1428  cd PRODUCTS/
+ 1429  ls
+ 1430  head 0385337116.txt.new 
+ 1431  ls ~
+ 1432  cd ~
+ 1433  head amazon_reviews_us_Books_v1_02.tsv 
+ 1434  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1435  cd assignment2/
+ 1436  ls
+ 1437  less cmds.log
+ 1438  ls
+ 1439  cd 100ProductIDs.txt
+ 1440  cd PRODUCTS/
+ 1441  ls
+ 1442  l
+ 1443  cd ~
+ 1444  cd assignment2/PRODUCTS/
+ 1445  ls
+ 1446  mkdir ws7 
+ 1447  mv 043935806X.20211014_181014.txt ws7/
+ 1448  mv 043935806X.AVERAGE.txt ws7
+ 1449  mv 043935806X.LATEST.txt ws7
+ 1450  ls
+ 1451  less 0671524313.txt.new
+ 1452  sort -n 0671524313.txt.new > sorted.txt
+ 1453  ls
+ 1454  less sorted.txt 
+ 1455  less 0671524313.txt.new
+ 1456  rm sorted.txt 
+ 1457  cd ~
+ 1458  cd assignment2/
+ 1459  less cmds.log
+ 1460  cd PRODUCTS/
+ 1461  ls
+ 1462  for file in *.txt ; do sort -n file | awk ' { a[i++]=$1; } END { print
+ 1463  less cmds.log
+ 1464  cd /.
+ 1465  cd ~
+ 1466  cd assignment2/
+ 1467  less cmds.log
+ 1468  ls
+ 1469  for file in ../CUSTOMERS/*.new ; do ./datamash -W ppearson 1:2 < ../CUSTOMERS/$file ; done
+ 1470  for file in ../CUSTOMERS/*.new ; do sort -n file | awk ' { a[i++]=$1; } END { $2 = a[int(i/2)]; }' ; done
+ 1471  ls
+ 1472  for file in CUSTOMERS/*.new ; do sort -n file | awk ' { a[i++]=$1; } END { $2 = a[int(i/2)]; }' ; done
+ 1473  for file in /CUSTOMERS/*.new ; do sort -n file | awk ' { a[i++]=$1; } END { print a[int(i/2)]; }' ; done
+ 1474  ls
+ 1475  cd assignment2/
+ 1476  ls
+ 1477  cd PRODUCTS/
+ 1478  vi 0060875410.txt.new 
+ 1479  which gnuplot
+ 1480  gnuplot
+ 1481  apt install gnuplot-qt
+ 1482  cd assignment2
+ 1483  ls
+ 1484  cd PRODUCTS/
+ 1485  ls
+ 1486  cd ~
+ 1487  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+ 1488  ran for file in *.normal.txt; do median to find the median and then used another awk command to binarize the helpfulness score
+ 1489  cd ~/assignment2
+ 1490  ls
+ 1491  less cmds.log
+ 1492  cd ~/assignment3
+ 1493  ls
+ 1494  cd customer_normal/
+ 1495  cd ~
+ 1496  for file in /assignment3/customer_normal/BINARY/*.normal.txt ; do ./datamash -W ppearson 1:2 < /assignment3/customer_normal/BINARY/$file ; done
+ 1497  cd assignment3
+ 1498  ls
+ 1499  cd ~
+ 1500  ls
+ 1501  cd assignment2
+ 1502  ls
+ 1503  mv datamash-1.3 ~
+ 1504  cd ~
+ 1505  mv datamash-1.3/ assignment3
+ 1506  cd assignment3
+ 1507  for file in customer_normal/BINARY/ ; do ./datamash -W ppearson 1:2 < customer_normal/BINARY/$file ; done
+ 1508  cd ~/assignment2
+ 1509  less cmds.log
+ 1510  cd ~
+ 1511  cd assignment3
+ 1512  cd datamash-1.3/
+ 1513  for file in ../PRODUCTS/*.new ; do ./datamash -W ppearson 1:2 < ../PRODUC; for file in ../PRODUCTS/*.new ; do ./datamash -W ppearson 1:2 < ../PRODUC
+ 1514  for file in ../customer_normal/BINARY/*.new ; do ./datamash -W ppearson 1:2 < ../customer_normal/$file; done
+ 1515  for file in ../customer_normal/BINARY/*.new ; do ./datamash -W ppearson 1:2 < ../customer_normal/BINARY/$file; done
+ 1516  for file in ../customer_normal/BINARY/*.new ; do ./datamash -W ppearson 1:2 < $file; done
+ 1517  cd ~/assignment2
+ 1518  less cmds.log
+ 1519  cd ~/assignment3
+ 1520  cd data
+ 1521  cd datamash-1.3/
+ 1522  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < ../CUSTOMERS/$file ; done
+ 1523  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < ../customer_normal/BINARY/$file ; done
+ 1524  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file ; done
+ 1525  Correlation
+ 1526  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file | print $file; done
+ 1527  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file | print {$file}; done
+ 1528  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file ; done
+ 1529  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file | echo $file; done
+ 1530  for file in ../customer_normal/BINARY/*.txt ; echo $file | do ./datamash -W ppearson 1:2 < $file; done
+ 1531  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file ; done
+ 1532  for file in ../customer_normal/BINARY/*.txt ; echo $file | do ./datamash -W ppearson 1:2 < $file > correlation.txt; done
+ 1533  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file > correlation.txt; done
+ 1534  ls
+ 1535  less correlation.txt 
+ 1536  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file >> correlation.txt; done
+ 1537  less correlation.txt 
+ 1538  rm correlation.txt 
+ 1539  for file in ../customer_normal/BINARY/*.txt ; do ./datamash -W ppearson 1:2 < $file >> correlation.txt; done
+ 1540  ls
+ 1541  less correlation.txt 
+ 1542  mv correlation.txt ..
+ 1543  ls
+ 1544  cd ..
+ 1545  vim correlation.txt 
+ 1546  cd customer_normal/BINARY/
+ 1547  ls
+ 1548  l
+ 1549  :q
+ 1550  cd ~/assignment3/
+ 1551  ls
+ 1552  vim correlation.txt 
+ 1553  cd ~
+ 1554  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+ 1555  home
+ 1556  echo $HOME
+ 1557  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ 1558  brew install gnuplot
+ 1559  gnuplot
+ 1560  brew install gnuplot
+ 1561  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ 1562  brew install gnuplot
+ 1563  cd assignment3/
+ 1564  ls
+ 1565  cd customer_normal/
+ 1566  ls
+ 1567  cd BINARY/
+ 1568  ls
+ 1569  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.txt > 53047425.txt.normal.txt.BINARY.txt.ratings
+ 1570  awk '{print NR, $2}' 53047425.txt.normal.txt.BINARY.txt > 53047425.txt.normal.txt.BINARY.txt.helpful
+ 1571  head 53047425.txt.normal.txt.BINARY.txt.helpful 
+ 1572  head 53047425.txt.normal.txt.BINARY.txt.ratings
+ 1573  sort 53047425.txt.normal.txt.BINARY.txt > 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1574  ls
+ 1575  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.txt.ratings
+ 1576  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.txt.helpful
+ 1577  less 53047425.txt.normal.txt.BINARY.txt.helpful 
+ 1578  mkdir gnuplot
+ 1579  mv 53047425.txt.normal.txt.BINARY.txt.ratings gnuplot
+ 1580  mv 53047425.txt.normal.txt.BINARY.txt.helpful gnuplot
+ 1581  mv gnuplot ..
+ 1582  cd ..
+ 1583  ls
+ 1584  mv gnuplot ..
+ 1585  sudo port install gnuplot
+ 1586  brew install gnuplot
+ 1587  logout
+ 1588  exit
+ 1589  ls
+ 1590  mkdir assignment3
+ 1591  ls
+ 1592  script a3.txt
+ 1593  ls
+ 1594  rm a3.txt
+ 1595  cd assignment2
+ 1596  ls
+ 1597  less cmds.log
+ 1598  cd PRODUCTS/
+ 1599  ls
+ 1600  cd original/
+ 1601  ls
+ 1602  head 0060193395.txt 
+ 1603  ls
+ 1604  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' > $file.normal.txt ; done
+ 1605  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' $file > $file.normal.txt ; done
+ 1606  ls
+ 1607  for file in *.normal.txt ; do mv $file ~; done
+ 1608  ls
+ 1609  cd ~
+ 1610  ls
+ 1611  for file in *.normal.txt ; do mv $file /assignment3; done
+ 1612  chmod 1400050308.txt.normal.txt
+ 1613  chmod 777 140050308.txt.normal.txt
+ 1614  rm assignment 3
+ 1615  rm assignment3
+ 1616  rm -r assignment3
+ 1617  ls
+ 1618  rm 0060193395.txt.normal.txt
+ 1619  mv 0060193395.txt.normal.txt.normal.txt 0060193395.txt.normal.txt
+ 1620  head  0060392452.txt.normal.txt.normal.txt
+ 1621  head 0060392452.txt.normal.txt.normal.txt
+ 1622  less 0060392452.txt.normal.txt
+ 1623  less 0060392452.txt.normal.txt.normal.txt 
+ 1624  for file in *.normal.txt ; do rm; done
+ 1625  for file in *.normal.txt ; do rm -r; done
+ 1626  ls
+ 1627  for file in *.normal.txt ; do rm -r; done
+ 1628  rm --help
+ 1629  for file in *.normal.txt ; do rm -f; done
+ 1630  ls
+ 1631  for file in *.normal.txt ; do rm -v; done
+ 1632  rm --help
+ 1633  for file in *.normal.txt ; do rm ./-normal; done
+ 1634  ls
+ 1635  for file in *.normal.txt ; do mv assignment3; done
+ 1636  for file in *.normal.txt ; do rm $file; done
+ 1637  ls
+ 1638  cd assignment2/
+ 1639  cd PRODUCTS/
+ 1640  ls
+ 1641  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' > $file.normal.txt ; done
+ 1642  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' $file > $file.normal.txt ; done
+ 1643  mkdir normal
+ 1644  for file in *.normal.txt ; do mv $file normal; done
+ 1645  ls
+ 1646  cd normal
+ 1647  ls
+ 1648  cd ./
+ 1649  cd .
+ 1650  cd ..
+ 1651  ls
+ 1652  rm -r normal
+ 1653  cd original/
+ 1654  ls
+ 1655  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' $file > $file.normal.txt ; done
+ 1656  mkdir normal
+ 1657  for file in *.normal.txt ; do mv $file normal; done
+ 1658  ls
+ 1659  cd normal
+ 1660  ls
+ 1661  mv normal ~
+ 1662  cd ~
+ 1663  cd assignment2/PRODUCTS/original/ 
+ 1664  ls
+ 1665  mv normal ~
+ 1666  cd ~
+ 1667  ls
+ 1668  mkdir assignment3
+ 1669  mv normal assignment3
+ 1670  ls
+ 1671  cd assignment3
+ 1672  ls
+ 1673  mv normal product_normal
+ 1674  ls
+ 1675  cd assignment2/PRODUCTS/original/ 
+ 1676  cd ../assignment2/PRODUCTS/original/ 
+ 1677  cd ..
+ 1678  cd CUSTOMERS/original/
+ 1679  for file in *.txt ; do awk -F "\t" 'NR > 1 && $10==0 {print $8,$9,0} NR > 1 && $10>0 {print $8,$9,$9/$10}' $file > $file.normal.txt ; done
+ 1680  mkdir customer_normal
+ 1681  for file in *.normal.txt ; do mv $file customer_normal/; done
+ 1682  mv customer_normal/ ~
+ 1683  cd ~
+ 1684  ls
+ 1685  mv customer_normal/ assignment3/
+ 1686  cd assignment3
+ 1687  ls
+ 1688  cd customer_normal/
+ 1689  ls
+ 1690  less 52173832.txt.normal.txt 
+ 1691  for file in *.normal.txt; do median=`sort -n -k 2 $file | awk ` { a[i++]=$2; } END { print a[int(i/2)]; }'` | awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $file > $file.BINARY.txt  
+ 1692  for file in *.normal.txt; do median=`sort -n -k 2 $file | awk ` { a[i++]=$2; } END { print a[int(i/2)]; }'` | awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $file > $file.BINARY.txt; done
+ 1693  for file in *.normal.txt; do median=`sort -n -k 2 $file | awk ' { a[i++]=$2; } END { print a[int(i/2)]; }'` | awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $file > $file.BINARY.txt; done
+ 1694  ls
+ 1695  head 0060392452.txt 0060392452.txt.BINARY.txt
+ 1696  head 50941451.txt.normal.txt 50941451.txt.normal.txt.BINARY.txt 
+ 1697  median=`sort -n -k 50941451.txt.normal.txt | awk ' { a[i++]=$2; } END { print a[int(i/2)]; }'`  
+ 1698  median=`sort -n -k 2 50941451.txt.normal.txt | awk ' { a[i++]=$2; } END { print a[int(i/2)]; }'` 
+ 1699  echo median
+ 1700  echo $median
+ 1701  head 50941451.txt.normal.txt
+ 1702  head -n 20 50941451.txt.normal.txt.BINARY.txt
+ 1703  for file in *.normal.txt; do median=`sort -n -k 2 $file | awk ' { a[i++]=$2; } END { print a[int(i/2)]; }'` | awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $file > $file.BINARY.txt; done
+ 1704  head -n 20 50941451.txt.normal.txt.BINARY.txt
+ 1705  head 50941451.txt.normal.txt 50941451.txt.normal.txt.BINARY.txt 
+ 1706  mkdir BINARY
+ 1707  for file in *.BINARY.txt; do mv $file BINARY; done
+ 1708  ls
+ 1709  cd ..
+ 1710  ls
+ 1711  cd product_normal/
+ 1712  ls
+ 1713  for file in *.normal.txt; do median=`sort -n -k 2 $file | awk ' { a[i++]=$2; } END { print a[int(i/2)]; }'` | awk -v median=$median '$2 < median {print $1,0} $2 >= median {print $1,1}' $file > $file.BINARY.txt; done
+ 1714  mkdir BINARY
+ 1715  for file in *.BINARY.txt; do mv $file BINARY; done
+ 1716  script a3.txt
+ 1717  logout
+ 1718  brew install gnuplot
+ 1719  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ 1720  brew reinstall gnuplot --with-qt5
+ 1721  sudo brew reinstall gnuplot --with-qt5
+ 1722  sudo apt install gnuplot
+ 1723  sudo apt install parallel
+ 1724  git clone -b branch-5-4-stable git://git.code.sf.net/p/gnuplot/gnuplot-main
+ 1725  cd gnuplot-main/
+ 1726  cd ~
+ 1727  cd assignment
+ 1728  cd assignment3
+ 1729  ls
+ 1730  cd gnuplot
+ 1731  ls
+ 1732  gnuplot> plot '53047425.txt.normal.txt.BINARY.txt.helpful' with linespoints linestyle 1 linecolor 7 title "helpful", '53047425.txt.normal.txt.BINARY.txt.ratings' with linespoints linestyle 1 linecolor 6 title "rating"
+ 1733  cd ~
+ 1734  ls
+ 1735  cd gnuplot-main/
+ 1736  ls
+ 1737  install-sh
+ 1738  vim README
+ 1739  ls
+ 1740  INSTALL
+ 1741  cd INSTALL
+ 1742  ./configure; make
+ 1743  ./configure
+ 1744  make install
+ 1745  make compile
+ 1746  logout
+ 1747  pwd
+ 1748  logout
+ 1749  cd assignment3
+ 1750  ls
+ 1751  cd gnuplot/
+ 1752  ls
+ 1753  less plot
+ 1754  rm plot
+ 1755  ls
+ 1756  logout
+ 1757  cd assignment
+ 1758  cd assignment3
+ 1759  ls
+ 1760  cd customer_normal/
+ 1761  ls
+ 1762  cd BINARY/
+ 1763  ls
+ 1764  less 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1765  vi 53047425.txt.normal.txt.BINARY.sorted.txt 
+ 1766  awk '{print NR, $1}' > 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1767  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1768  awk '{print NR, $2}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1769  ls
+ 1770  mkdir plot_these
+ 1771  head 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1772  less 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1773  less 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1774  less 53047425.txt.normal.txt.BINARY.txt
+ 1775  sort 53047425.txt.normal.txt.BINARY.txt > 53047425.txt.normal.txt.BINARY..sorted.txt
+ 1776  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1777  awk '{print NR, $2}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1778  head 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1779  less 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1780  sort 53047425.txt.normal.txt.BINARY.txt > 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1781  less 53047425.txt.normal.txt.BINARY.sorted.txt
+ 1782  awk '{print NR, $1}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1783  awk '{print NR, $2}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1784  head 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 53047425.txt.normal.txt.BINARY.sorted.txt.ratings
+ 1785  mv 53047425.txt.normal.txt.BINARY.sorted.txt.helpful plot_these/
+ 1786  mv 53047425.txt.normal.txt.BINARY.sorted.txt.ratings plot_these/
+ 1787  mv plot_these/ ~/assignment3/
+ 1788  cd ..
+ 1789  cd..
+ 1790  cd ..
+ 1791  ls
+ 1792  rm gnuplot
+ 1793  rm -r gnuplot
+ 1794  logoout
+ 1795  exit
+ 1796  ls
+ 1797  cd assignment3
+ 1798  ls
+ 1799  cd plot_these/
+ 1800  ls
+ 1801  for i in `cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful`; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1802  for i in $(`cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful`); do awk '{ print $1 }' >> helpful_row.txt; done
+ 1803  for i in "$(cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful)"; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1804  for i in cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1805  for i in $(cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful); do awk '{ print $1 }' >> helpful_row.txt; done
+ 1806  filename = 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1807  filename=53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1808  all_lines = `cat $filename`
+ 1809  all_lines=`cat $filename`
+ 1810  for i in all_lines; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1811  cd assignment3
+ 1812  ls
+ 1813  cd plot_these/
+ 1814  ls
+ 1815  for i in `cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1816  for i in `cat 53047425.txt.normal.txt.BINARY.sorted.txt.helpful`; do awk '{ print $1 }' >> helpful_row.txt; done
+ 1817  less 53047425.txt.normal.txt.BINARY.sorted.txt.
+ 1818  less 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 
+ 1819  cut -d " " -f 1 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 
+ 1820  cut -d " " -f 1 53047425.txt.normal.txt.BINARY.sorted.txt.helpful > 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 
+ 1821  less 53047425.txt.normal.txt.BINARY.sorted.txt.helpful 
+ 1822  cd ~/assignment3
+ 1823  ls
+ 1824  cd customer_normal/
+ 1825  ls
+ 1826  cd ..
+ 1827  cd customer_normal/
+ 1828  cd BINARY/
+ 1829  ls
+ 1830  awk '{print NR, $2}' 53047425.txt.normal.txt.BINARY.sorted.txt > 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1831  ls
+ 1832  mv 53047425.txt.normal.txt.BINARY.sorted.txt.helpful ..
+ 1833  cd ..
+ 1834  mv 53047425.txt.normal.txt.BINARY.sorted.txt.helpful ..
+ 1835  cd ..
+ 1836  cd 53047425.txt.normal.txt.BINARY.sorted.txt.helpful plot t
+ 1837  cd plot_these
+ 1838  ls
+ 1839  rm 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1840  ls
+ 1841  cd ..
+ 1842  mv 53047425.txt.normal.txt.BINARY.sorted.txt.helpful plot_these
+ 1843  ls
+ 1844  cd plot_these
+ 1845  ls
+ 1846  cut -d " " -f 1 53047425.txt.normal.txt.BINARY.sorted.txt.helpful > helpul_row.txt 
+ 1847  cut -d " " -f 2 53047425.txt.normal.txt.BINARY.sorted.txt.helpful > helpul_column.txt 
+ 1848  head helpul_row.txt helpul_column.txt 
+ 1849  head 53047425.txt.normal.txt.BINARY.sorted.txt.helpful
+ 1850  cut -d " " -f 2 53047425.txt.normal.txt.BINARY.sorted.txt.rating > rating_column.txt 
+ 1851  cut -d " " -f 2 53047425.txt.normal.txt.BINARY.sorted.txt.ratings > rating_column.txt 
+ 1852  cut -d " " -f 1 53047425.txt.normal.txt.BINARY.sorted.txt.ratings > rating_row.txt 
+ 1853  ls
+ 1854  exit
+ 1855  awk 'length($0)==2{next} 1' amazon_reviews_us_Books_v1_02.tsv.stop3.review_body
+ 1856  sed -e 's/ [a-zA-Z0-9]\{4\} / /g' amazon_reviews_us_Books_v1_02.tsv.stop3.review_body > amazon_reviews_us_Books_v1_02.tsv.stop4.review_body
+ 1857  ls
+ 1858  rm amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1859  rm amazon_reviews_us_Books_v1_02.tsv.stop.review_body
+ 1860  rm amazon_reviews_us_Books_v1_02.tsv.stop2.review_body
+ 1861  rm amazon_reviews_us_Books_v1_02.tsv.stop3.review_body
+ 1862  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop4.review_body | sort | uniq -c | sort -n
+ 1863  sed -e 's/ [a-zA-Z0-9]\{4\} / /g' amazon_reviews_us_Books_v1_02.tsv.stop4.review_body > amazon_reviews_us_Books_v1_02.tsv.stop5.review_body
+ 1864  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop5.review_body | sort | uniq -c | sort -n
+ 1865  ls
+ 1866  rm amazon_reviews_us_Books_v1_02.tsv.stop4.review_body 
+ 1867  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop4.review_body | sort | uniq -c | sort -n -r
+ 1868  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop5.review_body | sort | uniq -c | sort -n -r
+ 1869  sed 's/\b\w\b \?//g' amazon_reviews_us_Books_v1_02.tsv.stop5.review_body > amazon_reviews_us_Books_v1_02.tsv.stop6.review_body
+ 1870  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop6.review_body | sort | uniq -c | sort -n -r
+ 1871  sed 's/\b\w\w\b \?//g' amazon_reviews_us_Books_v1_02.tsv.stop6.review_body > amazon_reviews_us_Books_v1_02.tsv.stop.review_body
+ 1872  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop.review_body | sort | uniq -c | sort -n -r
+ 1873  ls
+ 1874  rm amazon_reviews_us_Books_v1_02.tsv.stop5.review_body 
+ 1875  rm amazon_reviews_us_Books_v1_02.tsv.stop6.review_body 
+ 1876  ls
+ 1877  ls
+ 1878  mv Graph assignment3
+ 1879  ls
+ 1880  cd assignment3
+ 1881  ls
+ 1882  cd ~
+ 1883  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv  > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1884  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1885  awk -F "\t" '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1886  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1887  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1888  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 1 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1889  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1890  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1891  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1892  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1893  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1894  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1895  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv  > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1896  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1897  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1898  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c 
+ 1899  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1900  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 11 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1901  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1902  head -n 10 amazon_reviews_us_Books_v1_02.tsv
+ 1903  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1904  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1905  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv  > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1906  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1907  vim amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1908  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c 
+ 1909  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 20 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1910  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1911  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+ 1912  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+ 1913  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1914  awk '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1915  vi amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1916  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1917  awk -F "\t" '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1918  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n -r
+ 1919  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n
+ 1920  sed 's/\<the\>//g' amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1921  sed 's/\<and\>//g' amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1922  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n
+ 1923  sed 's/\<the\>//g' amazon_reviews_us_Books_v1_02.tsv.review_body > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1924  sed 's/\<and\>//g' amazon_reviews_us_Books_v1_02.tsv.review_body > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1925  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.review_body | sort | uniq -c | sort -n
+ 1926  less amazon_reviews_us_Books_v1_02.tsv.review_body 
+ 1927  awk -F "\t" '{print $14}' amazon_reviews_us_Books_v1_02.tsv | head -n 10 > amazon_reviews_us_Books_v1_02.tsv.review_body
+ 1928  sed -e 's/\<the\>//g' amazon_reviews_us_Books_v1_02.tsv.review_body > amazon_reviews_us_Books_v1_02.tsv.stop.review_body
+ 1929  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop.review_body | sort | uniq -c | sort -n
+ 1930  sed -e 's/\<and\>//g' amazon_reviews_us_Books_v1_02.tsv.stop.review_body > amazon_reviews_us_Books_v1_02.tsv.stop2.review_body
+ 1931  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop2.review_body | sort | uniq -c | sort -n
+ 1932  sed -e 's/\ /><br>//g' amazon_reviews_us_Books_v1_02.tsv.stop2.review_body > amazon_reviews_us_Books_v1_02.tsv.stop3.review_body
+ 1933  sed -e 's/\/><br>>//g' amazon_reviews_us_Books_v1_02.tsv.stop2.review_body > amazon_reviews_us_Books_v1_02.tsv.stop3.review_body
+ 1934  tr " " "\n" < amazon_reviews_us_Books_v1_02.tsv.stop3.review_body | sort | uniq -c | sort -n
+ 1935  script a3.txt
+ 1936  mv a3.txt assignment3/
+ 1937  cd assignment
+ 1938  cd assignment3
+ 1939  ls
+ 1940  history > cmds.log
+ 1941  git init
+ 1942  git add a3.txt Graph cmds.log
+ 1943  git commit -m "assignment3"
+ 1944  git remote add origin https://github.com/adot18/as3.git
+ 1945  git push -u origin master
+ 1946  mkdir ws8
+ 1947  ls
+ 1948  script ws8.txt
+ 1949  history > cmds.log
